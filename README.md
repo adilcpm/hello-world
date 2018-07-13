@@ -7,3 +7,5 @@ Also trying to learn Python in Udemy, installed VSCode.
 
 lil bit of HTML, CSS and JS.
 Have some programming logic, previous 10% on C++.
+
+i have edited this using VSCode, pushing.
