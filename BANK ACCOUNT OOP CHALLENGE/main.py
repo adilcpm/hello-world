@@ -2,17 +2,18 @@ import time
 
 accountlist = [["None","None"]]
 banking = True
+accountlist_path = 'BANK ACCOUNT OOP CHALLENGE\\account-list.txt'
 
-def readlist():
-    with open('BANK ACCOUNT OOP CHALLENGE\\account-list.txt','r') as filehandle:
+def readlist(x):
+    with open(x,'r') as filehandle:
         content = filehandle.readlines()
         for line in content:
             item = line.split()
             item[1] = int(item[1])
             accountlist.append(item)
 
-def writelist():
-    with open('BANK ACCOUNT OOP CHALLENGE\\account-list.txt','w') as filehandle:
+def writelist(x):
+    with open(x,'w') as filehandle:
         for item in accountlist:
             if item[0] == "None" and item[1] == "None":
                 pass
@@ -49,7 +50,7 @@ def again():
 def close():
     global banking
     print("\n\nHave a good day ! ")
-    writelist()
+    writelist(accountlist_path)
     banking = False
 
 def accounts(token):
@@ -132,6 +133,6 @@ def transact(accnum):
     except ValueError:
         print("\n\nYou are supposed to enter a account number, try again.")
 
-readlist()
+readlist(accountlist_path)
 while banking == True:
     bank()
