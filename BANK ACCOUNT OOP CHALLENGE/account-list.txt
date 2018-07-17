@@ -1,3 +1,4 @@
 izza 20000
 zia 40000
 shai 10000
+adil 100
